@@ -1,0 +1,96 @@
+html {
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flexTotalCenter, body, .calculatorContainer .calculatorKeysContainer, .calculatorContainer .calculatorKeysContainer .calculatorNumberKeysContainer, .calculatorContainer .calculatorKeysContainer .calculatorOperationsKeysContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.noselect, .calculatorContainer .calculatorKeysContainer .calculatorKeyM, .calculatorContainer .calculatorKeysContainer .calculatorKeyL {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.calculatorContainer {
+  background: #383838;
+  padding: 0.125rem;
+  border-radius: 0.125rem;
+}
+
+.calculatorContainer .calculatorResult {
+  overflow: hidden;
+  max-width: 15rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: right;
+}
+
+.calculatorContainer .calculatorKeysContainer .calculatorKeyM, .calculatorContainer .calculatorKeysContainer .calculatorKeyL {
+  text-align: center;
+  background: #eee;
+  width: 2rem;
+  height: 2rem;
+  color: #383838;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 0.125rem;
+  margin-bottom: 0.125rem;
+  margin-right: 0.125rem;
+  opacity: 0.9;
+}
+
+.calculatorContainer .calculatorKeysContainer .calculatorKeyM:hover, .calculatorContainer .calculatorKeysContainer .calculatorKeyL:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.calculatorContainer .calculatorKeysContainer .calculatorKeyM:active, .calculatorContainer .calculatorKeysContainer .calculatorKeyL:active {
+  opacity: 1;
+}
+
+.calculatorContainer .calculatorKeysContainer .calculatorKeyL {
+  text-align: left;
+  width: 6.125rem;
+}
+
+.calculatorContainer .calculatorKeysContainer .calculatorNumberKeysContainer {
+  width: 12.5rem;
+}
+
+.calculatorContainer .calculatorKeysContainer .calculatorOperationsKeysContainer {
+  width: 4.2rem;
+}
+
+.calculatorContainer .calculatorKeysContainer .calculatorOperationsKeysContainer .calculatorKeyM, .calculatorContainer .calculatorKeysContainer .calculatorOperationsKeysContainer .calculatorKeyL {
+  background: orange;
+  color: #fff;
+}
+/*# sourceMappingURL=css.css.map */

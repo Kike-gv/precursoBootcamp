@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+@mixin fontFamilyBase {
+  font-family: "Roboto", sans-serif !important;
+}
+
+@mixin noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+textarea,
+select,
+input,
+button {
+  outline: none;
+}
+
+body {
+  @include fontFamilyBase;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.pasapalabraContainer {
+  background: aliceblue;
+  position: relative;
+  width: 75vw;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  border-radius: 0.125rem;
+  padding: 1rem;
+  -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.75);
+  .fraseContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 10rem;
+
+    .timeContainer{
+      width: 10rem;
+      height: 10rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: darkblue;
+      color: white;
+      border-radius: 0.125rem;
+
+      font-size: 3rem;
+    }
+
+    .imagenContainer {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 0.125rem;
+      background: url("https://img.europapress.es/fotoweb/fotonoticia_20181209194716_640.jpg");
+      background-position: center;
+      background-size: cover;
+      &.triste {
+        background: url("https://www.formulatv.com/images/articulos/89000/n89366_y6FkLB1vUiR2q8J0NE9atHzxW5Yoe3csP-c4.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    .textContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-direction: column;
+      width: calc(100% - 22rem);
+
+      .questionContainer {
+        @include noselect;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .question {
+          font-size: 1.25rem;
+          color: #383838;
+        }
+      }
+      .answerContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .pasapAnswer {
+          width: calc(100% - 9rem);
+          font-size: 1.25rem;
+          color: #383838;
+          background-color: transparent;
+          border: none;
+          border-bottom: solid 1px #aaaaaa;
+        }
+        #nameButton {
+          display: block;
+        }
+        .pasapButton {
+          @include noselect;
+          display: none;
+          width: 8rem;
+          background: darkblue;
+          color: white;
+          font-size: 1.25rem;
+          border-radius: 0.5rem;
+          padding: 0.5rem;
+          opacity: 0.9;
+          &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+          }
+          &:active {
+            opacity: 1;
+            cursor: pointer;
+          }
+
+          &.newButton {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .roscoContainer {
+    @include noselect;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+
+    .letter {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.5rem;
+
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+
+      width: 5rem;
+      height: 5rem;
+
+      color: white;
+      font-size: 3rem;
+      background: darkblue;
+
+      &.good {
+        background: darkgreen;
+      }
+      &.bad {
+        background: darkred;
+      }
+      &.current {
+        background: darkorange;
+      }
+    }
+    &.hidden {
+      display: none;
+    }
+    @for $i from 1 through 27 {
+
+      .letter:nth-child(n + #{$i}) {
+        -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        $i : $i/8;
+        animation-delay: $i +s;
+      }
+    }
+  }
+
+  .puntuacionContainer {
+    .user {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      flex-wrap: wrap;
+
+      .participante {
+        font-size: 1.25rem;
+        color: #383838;
+        width: 20rem;
+      }
+      .puntuacion {
+        font-size: 1.25rem;
+        color: darkgreen;
+      }
+      .fails {
+        font-size: 1.25rem;
+        color: darkred;
+      }
+    }
+  }
+  
+  &#pasapalabraContainerPunt{
+    display: none;
+  }
+}

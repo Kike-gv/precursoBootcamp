@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+textarea,
+select,
+input,
+button {
+  outline: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif !important;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+}
+
+.pasapalabraContainer {
+  background: aliceblue;
+  position: relative;
+  width: 75vw;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  border-radius: 0.125rem;
+  padding: 1rem;
+  -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.pasapalabraContainer .fraseContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 10rem;
+}
+
+.pasapalabraContainer .fraseContainer .timeContainer {
+  width: 10rem;
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: darkblue;
+  color: white;
+  border-radius: 0.125rem;
+  font-size: 3rem;
+}
+
+.pasapalabraContainer .fraseContainer .imagenContainer {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 0.125rem;
+  background: url("https://img.europapress.es/fotoweb/fotonoticia_20181209194716_640.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.pasapalabraContainer .fraseContainer .imagenContainer.triste {
+  background: url("https://www.formulatv.com/images/articulos/89000/n89366_y6FkLB1vUiR2q8J0NE9atHzxW5Yoe3csP-c4.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.pasapalabraContainer .fraseContainer .textContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(100% - 22rem);
+}
+
+.pasapalabraContainer .fraseContainer .textContainer .questionContainer {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pasapalabraContainer .fraseContainer .textContainer .questionContainer .question {
+  font-size: 1.25rem;
+  color: #383838;
+}
+
+.pasapalabraContainer .fraseContainer .textContainer .answerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pasapalabraContainer .fraseContainer .textContainer .answerContainer .pasapAnswer {
+  width: calc(100% - 9rem);
+  font-size: 1.25rem;
+  color: #383838;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px #aaaaaa;
+}
+
+.pasapalabraContainer .fraseContainer .textContainer .answerContainer #nameButton {
+  display: block;
+}
+
+.pasapalabraContainer .fraseContainer .textContainer .answerContainer .pasapButton {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  display: none;
+  width: 8rem;
+  background: darkblue;
+  color: white;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  opacity: 0.9;
+}
+
+.pasapalabraContainer .fraseContainer .textContainer .answerContainer .pasapButton:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.pasapalabraContainer .fraseContainer .textContainer .answerContainer .pasapButton:active {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.pasapalabraContainer .fraseContainer .textContainer .answerContainer .pasapButton.newButton {
+  width: 100%;
+}
+
+.pasapalabraContainer .roscoContainer {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10rem;
+}
+
+.pasapalabraContainer .roscoContainer .letter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 5rem;
+  height: 5rem;
+  color: white;
+  font-size: 3rem;
+  background: darkblue;
+}
+
+.pasapalabraContainer .roscoContainer .letter.good {
+  background: darkgreen;
+}
+
+.pasapalabraContainer .roscoContainer .letter.bad {
+  background: darkred;
+}
+
+.pasapalabraContainer .roscoContainer .letter.current {
+  background: darkorange;
+}
+
+.pasapalabraContainer .roscoContainer.hidden {
+  display: none;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 1) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 0.125s;
+          animation-delay: 0.125s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 2) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 3) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 0.375s;
+          animation-delay: 0.375s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 4) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 5) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 0.625s;
+          animation-delay: 0.625s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 6) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 7) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 0.875s;
+          animation-delay: 0.875s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 8) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 9) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 1.125s;
+          animation-delay: 1.125s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 10) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 11) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 1.375s;
+          animation-delay: 1.375s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 12) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 13) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 1.625s;
+          animation-delay: 1.625s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 14) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 15) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 1.875s;
+          animation-delay: 1.875s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 16) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 17) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 2.125s;
+          animation-delay: 2.125s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 18) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 2.25s;
+          animation-delay: 2.25s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 19) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 2.375s;
+          animation-delay: 2.375s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 20) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 21) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 2.625s;
+          animation-delay: 2.625s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 22) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 2.75s;
+          animation-delay: 2.75s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 23) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 2.875s;
+          animation-delay: 2.875s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 24) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 25) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 3.125s;
+          animation-delay: 3.125s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 26) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 3.25s;
+          animation-delay: 3.25s;
+}
+
+.pasapalabraContainer .roscoContainer .letter:nth-child(n + 27) {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation-delay: 3.375s;
+          animation-delay: 3.375s;
+}
+
+.pasapalabraContainer .puntuacionContainer .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pasapalabraContainer .puntuacionContainer .user .participante {
+  font-size: 1.25rem;
+  color: #383838;
+  width: 20rem;
+}
+
+.pasapalabraContainer .puntuacionContainer .user .puntuacion {
+  font-size: 1.25rem;
+  color: darkgreen;
+}
+
+.pasapalabraContainer .puntuacionContainer .user .fails {
+  font-size: 1.25rem;
+  color: darkred;
+}
+
+.pasapalabraContainer#pasapalabraContainerPunt {
+  display: none;
+}
+/*# sourceMappingURL=css.css.map */

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <script src="js.js"></script>
+</head>
+
+<body>
+
+    <div class="pasapalabraContainer">
+
+
+        <div class="fraseContainer">
+            <div class="timeContainer" id="timeContainer">400</div>
+
+            <div class="textContainer">
+                <div class="questionContainer">
+                    <div class="question" id='pasapQuestion'>Bienvenido a Pasapalabra! Cómo te llamas?</div>
+                </div>
+                <div class="answerContainer">
+                    <input type="text" class="pasapAnswer" id='pasapAnswer' name="respuesta"
+                        placeholder="Como te llamas?">
+                    <button class="pasapButton" id="nameButton" onclick="getName()">Nombre</button>
+                    <button class="pasapButton" id="nextQButton" onclick="game()">Pregunta</button>
+                    <button class="pasapButton" id="pasapButton" onclick="getAnswer(element)">Respuesta</button>
+
+                    <button class="pasapButton newButton" id="newButton" onclick="newTry()">Volver a intentar</button>
+
+                </div>
+            </div>
+
+            <div class="imagenContainer" id='imagen'></div>
+        </div>
+
+
+        <div class="roscoContainer hidden" id='roscoContainer'>
+
+                <div class="letter" id='q0'>a</div>
+                <div class="letter" id='q1'>b</div>
+                <div class="letter" id='q2'>c</div>
+                <div class="letter" id='q3'>d</div>
+                <div class="letter" id='q4'>e</div>
+                <div class="letter" id='q5'>f</div>
+                <div class="letter" id='q6'>g</div>
+                <div class="letter" id='q7'>h</div>
+                <div class="letter" id='q8'>i</div>
+                <div class="letter" id='q9'>j</div>
+                <div class="letter" id='q10'>k</div>
+                <div class="letter" id='q11'>l</div>
+                <div class="letter" id='q12'>m</div>
+                <div class="letter" id='q13'>n</div>
+                <div class="letter" id='q14'>ñ</div>
+                <div class="letter" id='q15'>o</div>
+                <div class="letter" id='q16'>p</div>
+                <div class="letter" id='q17'>q</div>
+                <div class="letter" id='q18'>r</div>
+                <div class="letter" id='q19'>s</div>
+                <div class="letter" id='q20'>t</div>
+                <div class="letter" id='q21'>u</div>
+                <div class="letter" id='q22'>v</div>
+                <div class="letter" id='q23'>w</div>
+                <div class="letter" id='q24'>x</div>
+                <div class="letter" id='q25'>y</div>
+                <div class="letter" id='q26'>z</div>
+            </div>
+
+
+    </div>
+
+    <div class="pasapalabraContainer" id='pasapalabraContainerPunt'>
+        <div class="puntuacionContainer" id='puntuacionContainer'></div>
+    </div>
+
+</body>
+
+</html>
