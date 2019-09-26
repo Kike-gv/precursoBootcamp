@@ -2,6 +2,11 @@
 
 texto
 
+
+## INDEX
+
+[CODE](#CODE)
+
 ## SUBTITULO
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit proin, dapibus arcu aliquam porta nibh aenean ac vestibulum, mus luctus ut fringilla quisque diam habitasse. Aliquam eget *donec magnis mollis semper sapien arcu aliquet per condimentum,* ultricies nunc auctor lacinia massa proin faucibus fames tincidunt odio, dapibus platea iaculis ornare **nascetur diam** sagittis scelerisque ut. Fusce lacinia sagittis vitae turpis hendrerit congue habitasse lectus, magna blandit sapien eros eget porta facilisi, ***diam praesent varius condimentum auctor*** nullam sollicitudin.
@@ -29,3 +34,7 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit proin, dapibus arcu aliqu
 ### CODE
 
 para escribir comandos `git commit`
+
+```js
+var name = 'kike';
+```
