@@ -190,7 +190,7 @@ body {
     &.hidden {
       display: none;
     }
-    @for $i from 1 through 27 {
+    @for $i from 1 through 6 {
 
       .letter:nth-child(n + #{$i}) {
         -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
